@@ -28,9 +28,9 @@
 <meta property="og:image" content="http://zhenhua-lee.github.io/img/react-router/base.png">
 <meta property="og:image" content="http://zhenhua-lee.github.io/img/react-router/base.png">
 <meta property="og:image" content="http://zhenhua-lee.github.io/img/react-router/internal.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/429.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/430.png">
-<meta property="og:updated_time" content="2020-08-10T15:44:44.938Z">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/429.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/430.png">
+<meta property="og:updated_time" content="2020-08-15T04:25:31.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Router原理">
 <meta name="twitter:description" content="一、React Router基础之history1.1 History介绍 history是一个独立的第三方js库，可以用来兼容在不同浏览器、不同环境下对历史记录的管理，拥有统一的API。具体来说里面的history分为三类   老浏览器的history: 主要通过hash来实现，对应createHashHistory 高版本浏览器: 通过html5里面的history，对应createBrows">
@@ -89,6 +89,8 @@
 
   <!-- 聊天系统 -->
   
+    
+   <link type="text/css" rel="stylesheet" href="/renxi/default.css">
    <style>
       #modal {
         position: static !important;
@@ -374,7 +376,7 @@
 <p>为了简单说明，只描述使用<code>browserHistory</code>的实现，<code>hashHistory</code>的实现过程是类似的，就不在说明</p>
 </blockquote>
 <p><img src="http://zhenhua-lee.github.io/img/react-router/internal.png" alt></p>
-<h3 id="2-3-用户点击了Link组件后路由系统中到底发生了哪些变化"><a href="#2-3-用户点击了Link组件后路由系统中到底发生了哪些变化" class="headerlink" title="2.3 用户点击了Link组件后路由系统中到底发生了哪些变化"></a>2.3 用户点击了Link组件后路由系统中到底发生了哪些变化</h3><p><img src="http://blog.poetries.top/img-repo/2019/10/429.png" alt></p>
+<h3 id="2-3-用户点击了Link组件后路由系统中到底发生了哪些变化"><a href="#2-3-用户点击了Link组件后路由系统中到底发生了哪些变化" class="headerlink" title="2.3 用户点击了Link组件后路由系统中到底发生了哪些变化"></a>2.3 用户点击了Link组件后路由系统中到底发生了哪些变化</h3><p><img src="https://poetries1.gitee.io/img-repo/2019/10/429.png" alt></p>
 <blockquote>
 <p><code>Link</code> 组件最终会渲染为 <code>HTML</code> 标签 <code>&lt;a&gt;</code>，它的 <code>to</code>、<code>query</code>、<code>hash</code>属性会被组合在一起并渲染为 <code>href</code> 属性。虽然 <code>Link</code> 被渲染为超链接，但在内部实现上使用脚本拦截了浏览器的默认行为，然后调用了<code>history.pushState</code> 方法</p>
 </blockquote>
@@ -386,7 +388,7 @@
 <blockquote>
 <p>在 <code>Router</code> 组件的 <code>componentWillMount</code> 生命周期方法中调用了 <code>history.listen(listener)</code> 方法。<code>listener</code> 会在上述 <code>matchRoutes</code> 方法执行成功后执行<code>listener(nextState)</code>，<code>nextState</code>对象每个属性的具体含义已经在上述代码中注释，接下来执行<code>this.setState(nextState)</code> 就可以实现重新渲染 <code>Router</code>组件。举个简单的例子，当 URL（准确的说应该是 <code>location.pathname</code>） 为 <code>/archives/posts</code> 时，应用的匹配结果如下图所示</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/430.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/430.png" alt></p>
 <blockquote>
 <p>到这里，系统已经完成了当用户点击一个由 <code>Link</code> 组件渲染出的超链接到页面刷新的全过程</p>
 </blockquote>

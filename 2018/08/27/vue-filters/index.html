@@ -23,16 +23,16 @@
 <meta property="og:site_name" content="Poetry&#39;s Blog">
 <meta property="og:description" content="一、全局过滤器// 第一个参数表示：过滤器的名称// 第二个参数表示：函数，使用过滤器的时候，这个函数中的代码会被执行Vue.filter(&apos;filterName&apos;, function (value) &amp;#123;  // value 表示要过滤的内容&amp;#125;) 例子 Vue.filter(&apos;date&apos;, function (input, format = &apos;yyyy-MM-dd hh:mm:">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/622.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/623.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/624.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/625.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/626.png">
-<meta property="og:updated_time" content="2020-08-10T15:44:44.946Z">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/622.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/623.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/624.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/625.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/626.png">
+<meta property="og:updated_time" content="2020-08-15T04:25:31.938Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue过滤器（八）">
 <meta name="twitter:description" content="一、全局过滤器// 第一个参数表示：过滤器的名称// 第二个参数表示：函数，使用过滤器的时候，这个函数中的代码会被执行Vue.filter(&apos;filterName&apos;, function (value) &amp;#123;  // value 表示要过滤的内容&amp;#125;) 例子 Vue.filter(&apos;date&apos;, function (input, format = &apos;yyyy-MM-dd hh:mm:">
-<meta name="twitter:image" content="http://blog.poetries.top/img-repo/2019/10/622.png">
+<meta name="twitter:image" content="https://poetries1.gitee.io/img-repo/2019/10/622.png">
 
   
 
@@ -87,6 +87,8 @@
 
   <!-- 聊天系统 -->
   
+    
+   <link type="text/css" rel="stylesheet" href="/renxi/default.css">
    <style>
       #modal {
         position: static !important;
@@ -282,23 +284,23 @@
 <p>一个项目中，可能要用到很多过滤器来处理数据，多个组件公用的，可以注册全局过滤器。单个组件使用的，就挂载到实例<code>filters</code>中。项目做的多了以后，可以整理一套常用的<code>filters</code>，不用反复的写。比如：时间等各种操作，数据格式转化，单位换算，部分数据的<code>md5</code>加密等…</p>
 </blockquote>
 <p><strong>创建一个filters专门放各种过滤器</strong></p>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/622.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/622.png" alt></p>
 <blockquote>
 <p>filter.js</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/623.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/623.png" alt></p>
 <blockquote>
 <p> main.js</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/624.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/624.png" alt></p>
 <blockquote>
 <p>页面上直接用 ’｜过滤器名‘ 即可</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/625.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/625.png" alt></p>
 <blockquote>
 <p>或者直接在<code>main.js</code>中直接自定义全局过滤器</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/626.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/626.png" alt></p>
 <h2 id="二、局部过滤器"><a href="#二、局部过滤器" class="headerlink" title="二、局部过滤器"></a>二、局部过滤器</h2><blockquote>
 <p>在某一个vue实例的内创建的，只在当前实例中起作用</p>
 </blockquote>

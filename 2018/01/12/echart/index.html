@@ -23,19 +23,19 @@
 <meta property="og:site_name" content="Poetry&#39;s Blog">
 <meta property="og:description" content="十一个组件选项主要用来进行交互  一、Timeline选项 时间轴，每个图表最多仅有一个时间轴控件   二、Title选项 每个图表最多仅有一个标题控件，每个标题控件可设主副标题   可以对标题文字的大小样式进行设置   三、toolbox 工具箱，每个图表最多仅有一个工具箱。工具箱里面可以实现图表类型的切换，保存图片，刷新，查看数据等功能。可以对其像素进行设置   &amp;#123;    mark">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/45.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/46.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/47.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/48.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/49.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/50.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/51.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/52.png">
-<meta property="og:updated_time" content="2020-08-10T15:44:44.906Z">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/45.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/46.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/47.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/48.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/49.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/50.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/51.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/52.png">
+<meta property="og:updated_time" content="2020-08-15T04:25:31.906Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="echart使用小结">
 <meta name="twitter:description" content="十一个组件选项主要用来进行交互  一、Timeline选项 时间轴，每个图表最多仅有一个时间轴控件   二、Title选项 每个图表最多仅有一个标题控件，每个标题控件可设主副标题   可以对标题文字的大小样式进行设置   三、toolbox 工具箱，每个图表最多仅有一个工具箱。工具箱里面可以实现图表类型的切换，保存图片，刷新，查看数据等功能。可以对其像素进行设置   &amp;#123;    mark">
-<meta name="twitter:image" content="http://blog.poetries.top/img-repo/2019/10/45.png">
+<meta name="twitter:image" content="https://poetries1.gitee.io/img-repo/2019/10/45.png">
 
   
 
@@ -90,6 +90,8 @@
 
   <!-- 聊天系统 -->
   
+    
+   <link type="text/css" rel="stylesheet" href="/renxi/default.css">
    <style>
       #modal {
         position: static !important;
@@ -282,42 +284,42 @@
 <h2 id="一、Timeline选项"><a href="#一、Timeline选项" class="headerlink" title="一、Timeline选项"></a>一、Timeline选项</h2><ul>
 <li>时间轴，每个图表最多仅有一个时间轴控件</li>
 </ul>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/45.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/45.png" alt></p>
 <h2 id="二、Title选项"><a href="#二、Title选项" class="headerlink" title="二、Title选项"></a>二、Title选项</h2><ul>
 <li>每个图表最多仅有一个标题控件，每个标题控件可设主副标题</li>
 </ul>
 <blockquote>
 <p>可以对标题文字的大小样式进行设置</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/46.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/46.png" alt></p>
 <h2 id="三、toolbox"><a href="#三、toolbox" class="headerlink" title="三、toolbox"></a>三、toolbox</h2><ul>
 <li>工具箱，每个图表最多仅有一个工具箱。工具箱里面可以实现图表类型的切换，保存图片，刷新，查看数据等功能。可以对其像素进行设置</li>
 </ul>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/47.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/47.png" alt></p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    mark : &#123;</span><br><span class="line"></span><br><span class="line">        show : <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">        title : &#123;</span><br><span class="line"></span><br><span class="line">            mark : <span class="string">'辅助线开关'</span>,</span><br><span class="line"></span><br><span class="line">            markUndo : <span class="string">'删除辅助线'</span>,</span><br><span class="line"></span><br><span class="line">            markClear : <span class="string">'清空辅助线'</span></span><br><span class="line"></span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        lineStyle : &#123;</span><br><span class="line"></span><br><span class="line">            width : <span class="number">2</span>,</span><br><span class="line"></span><br><span class="line">            color : <span class="string">'#1e90ff'</span>,</span><br><span class="line"></span><br><span class="line">            type : <span class="string">'dashed'</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    dataZoom : &#123;</span><br><span class="line"></span><br><span class="line">        show : <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">        title : &#123;</span><br><span class="line"></span><br><span class="line">            dataZoom : <span class="string">'区域缩放'</span>,</span><br><span class="line"></span><br><span class="line">            dataZoomReset : <span class="string">'区域缩放后退'</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    dataView : &#123;</span><br><span class="line"></span><br><span class="line">        show : <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">        title : <span class="string">'数据视图'</span>,</span><br><span class="line"></span><br><span class="line">        readOnly: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">        lang: [<span class="string">'数据视图'</span>, <span class="string">'关闭'</span>, <span class="string">'刷新'</span>]</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    magicType: &#123;</span><br><span class="line"></span><br><span class="line">        show : <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">        title : &#123;</span><br><span class="line"></span><br><span class="line">            line : <span class="string">'折线图切换'</span>,</span><br><span class="line"></span><br><span class="line">            bar : <span class="string">'柱形图切换'</span>,</span><br><span class="line"></span><br><span class="line">            stack : <span class="string">'堆积'</span>,</span><br><span class="line"></span><br><span class="line">            tiled : <span class="string">'平铺'</span>,</span><br><span class="line"></span><br><span class="line">            force: <span class="string">'力导向布局图切换'</span>,</span><br><span class="line"></span><br><span class="line">            chord: <span class="string">'和弦图切换'</span>,</span><br><span class="line"></span><br><span class="line">            pie: <span class="string">'饼图切换'</span>,</span><br><span class="line"></span><br><span class="line">            funnel: <span class="string">'漏斗图切换'</span></span><br><span class="line"></span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        option: &#123;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// line: &#123;...&#125;,</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// bar: &#123;...&#125;,</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// stack: &#123;...&#125;,</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// tiled: &#123;...&#125;,</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// force: &#123;...&#125;,</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// chord: &#123;...&#125;,</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// pie: &#123;...&#125;,</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// funnel: &#123;...&#125;</span></span><br><span class="line"></span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        type : []</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    restore : &#123;</span><br><span class="line"></span><br><span class="line">        show : <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">        title : <span class="string">'还原'</span></span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    saveAsImage : &#123;</span><br><span class="line"></span><br><span class="line">        show : <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">        title : <span class="string">'保存为图片'</span>,</span><br><span class="line"></span><br><span class="line">        type : <span class="string">'png'</span>,</span><br><span class="line"></span><br><span class="line">        lang : [<span class="string">'点击保存'</span>]</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="四、tooltip"><a href="#四、tooltip" class="headerlink" title="四、tooltip"></a>四、tooltip</h2><ul>
 <li>提示框，鼠标悬浮交互时的信息提示</li>
 </ul>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/48.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/48.png" alt></p>
 <h2 id="五、legend"><a href="#五、legend" class="headerlink" title="五、legend"></a>五、legend</h2><ul>
 <li>图例，每个图表最多仅有一个图例，混搭图表共享</li>
 </ul>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/49.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/49.png" alt></p>
 <h2 id="六、dataRange"><a href="#六、dataRange" class="headerlink" title="六、dataRange"></a>六、dataRange</h2><ul>
 <li>值域选择，每个图表最多仅有一个值域控件</li>
 </ul>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/50.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/50.png" alt></p>
 <h2 id="七、dataZoom"><a href="#七、dataZoom" class="headerlink" title="七、dataZoom"></a>七、dataZoom</h2><ul>
 <li><a href="http://echarts.baidu.com/echarts2/doc/example/dataZoom.html" target="_blank" rel="noopener">数据区域缩放</a>。与toolbox.feature.dataZoom同步，仅对直角坐标系图表有效</li>
 </ul>
 <h2 id="roamController"><a href="#roamController" class="headerlink" title="roamController"></a>roamController</h2><ul>
 <li><a href="http://echarts.baidu.com/echarts2/doc/example/map1.html" target="_blank" rel="noopener">缩放漫游组件</a>，仅对地图有效</li>
 </ul>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/51.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/51.png" alt></p>
 <h2 id="八、grid"><a href="#八、grid" class="headerlink" title="八、grid"></a>八、grid</h2><blockquote>
 <p>直角坐标系内绘图网格</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/52.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/52.png" alt></p>
 <h2 id="九、xAxis"><a href="#九、xAxis" class="headerlink" title="九、xAxis"></a>九、xAxis</h2><blockquote>
 <p>直角坐标系中横轴数组，数组中每一项代表一条横轴坐标轴，仅有一条时可省略数组。最多同时存在2条横轴，单条横轴时可指定安放于grid的底部（默认）或顶部，2条同时存在时位置互斥，默认第一条安放于底部，第二条安放于顶部</p>
 </blockquote>

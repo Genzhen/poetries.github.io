@@ -23,12 +23,12 @@
 <meta property="og:site_name" content="Poetry&#39;s Blog">
 <meta property="og:description" content="本文介绍react-native-camera扫码的应用 更多详情文档 https://github.com/react-native-community/react-native-camera   效果展示  配置 react-native link react-native-camera // 配置andriod/app/src/build.gradle defaultConfig &amp;#1">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/676.png">
-<meta property="og:updated_time" content="2020-08-10T15:44:44.938Z">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/676.png">
+<meta property="og:updated_time" content="2020-08-15T04:25:31.934Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Native之相机扫码">
 <meta name="twitter:description" content="本文介绍react-native-camera扫码的应用 更多详情文档 https://github.com/react-native-community/react-native-camera   效果展示  配置 react-native link react-native-camera // 配置andriod/app/src/build.gradle defaultConfig &amp;#1">
-<meta name="twitter:image" content="http://blog.poetries.top/img-repo/2019/10/676.png">
+<meta name="twitter:image" content="https://poetries1.gitee.io/img-repo/2019/10/676.png">
 
   
 
@@ -83,6 +83,8 @@
 
   <!-- 聊天系统 -->
   
+    
+   <link type="text/css" rel="stylesheet" href="/renxi/default.css">
    <style>
       #modal {
         position: static !important;
@@ -270,7 +272,7 @@
 </ul>
 </blockquote>
 <p><strong>效果展示</strong></p>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/676.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/676.png" alt></p>
 <p><strong>配置</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">react-native link react-native-camera</span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 配置andriod/app/src/build.gradle </span></span><br><span class="line"></span><br><span class="line">defaultConfig &#123;</span><br><span class="line">    applicationId <span class="string">"com.jtyapps"</span></span><br><span class="line">    minSdkVersion rootProject.ext.minSdkVersion</span><br><span class="line">    targetSdkVersion rootProject.ext.targetSdkVersion</span><br><span class="line">    versionCode <span class="number">1</span></span><br><span class="line">    versionName <span class="string">"1.0"</span></span><br><span class="line">    ndk &#123;</span><br><span class="line">        abiFilters <span class="string">"armeabi-v7a"</span>, <span class="string">"x86"</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 添加这里</span></span><br><span class="line">    missingDimensionStrategy <span class="string">'react-native-camera'</span>, <span class="string">'general'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 配置andriod/gradle/wrapper/gradle-wrapper.properties</span></span><br><span class="line"><span class="comment">// 本教程使用的是这个版本</span></span><br><span class="line">distributionUrl=https\:<span class="comment">//services.gradle.org/distributions/gradle-4.10.1-all.zip</span></span><br></pre></td></tr></table></figure>

@@ -23,18 +23,18 @@
 <meta property="og:site_name" content="Poetry&#39;s Blog">
 <meta property="og:description" content="第一部分 Typescript基础一、typescript 安装npm i typescript -g  全局安装完成后，我们新建一个hello.ts的ts文件  // hello.ts内容let a = &quot;poet&quot;  接下来我们在命令行输入tsc hello.ts来编译这个ts文件，然后会在同级目录生成一个编译好了的hello.js文件  // hello.js内容var = &quot;poet&quot;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/545.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/546.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/547.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/545.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/546.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/547.png">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1480597-86ad083c5149a72e.png">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1480597-32fc82d43dadb063.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/548.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/549.png">
-<meta property="og:updated_time" content="2020-08-10T15:44:44.942Z">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/548.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/549.png">
+<meta property="og:updated_time" content="2020-08-15T04:25:31.938Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Typescript基础及结合React实践(一)">
 <meta name="twitter:description" content="第一部分 Typescript基础一、typescript 安装npm i typescript -g  全局安装完成后，我们新建一个hello.ts的ts文件  // hello.ts内容let a = &quot;poet&quot;  接下来我们在命令行输入tsc hello.ts来编译这个ts文件，然后会在同级目录生成一个编译好了的hello.js文件  // hello.js内容var = &quot;poet&quot;">
-<meta name="twitter:image" content="http://blog.poetries.top/img-repo/2019/10/545.png">
+<meta name="twitter:image" content="https://poetries1.gitee.io/img-repo/2019/10/545.png">
 
   
 
@@ -89,6 +89,8 @@
 
   <!-- 聊天系统 -->
   
+    
+   <link type="text/css" rel="stylesheet" href="/renxi/default.css">
    <style>
       #modal {
         position: static !important;
@@ -290,7 +292,7 @@
 <blockquote>
 <p>首先我们在命令行执行<code>tsc --init</code>来生成配置文件，然后我们在目录下看到生成了一个<code>tsconfig.json</code>文件</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/545.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/545.png" alt></p>
 <blockquote>
 <p>这个<code>json</code>文件里有很多选项</p>
 </blockquote>
@@ -305,7 +307,7 @@
 <blockquote>
 <p>接下来我们需要开启监控了，在<code>vscode</code>任务栏中</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/546.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/546.png" alt></p>
 <p><strong>Typescript在线编辑器</strong></p>
 <blockquote>
 <p>建议使用在线编辑器练习 <a href="http://www.typescriptlang.org/play/index.html" target="_blank" rel="noopener">http://www.typescriptlang.org/play/index.html</a></p>
@@ -351,7 +353,7 @@
 <blockquote>
 <p>此时我们发现在<code>ts</code>中会报错</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/547.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/547.png" alt></p>
 <ul>
 <li>因为我们取这个<code>dom</code>节点，有可能取到，也有可能没取到，当没取到的时候，相当于是<code>null</code>，是没有<code>style</code>这个属性的。</li>
 <li>那么我们可以给它添加一个类型为<code>any</code></li>
@@ -603,12 +605,12 @@
 <p>最后修改组件，进入<code>./src/components/</code>,其中</p>
 </blockquote>
 <p>到目前为止，我们完成了<code>reducers</code>的合并了，那么我们看看效果如何，首先我们给<code>./src/index.tsc</code>添加<code>Counter2</code>组件，这样的目的是与<code>Counter</code>组件完全独立，互不影响，但是又能够最终合并到<code>readucers</code></p>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/548.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/548.png" alt></p>
 <h3 id="2-3-路由"><a href="#2-3-路由" class="headerlink" title="2.3 路由"></a>2.3 路由</h3><h4 id="2-3-1-基本用法"><a href="#2-3-1-基本用法" class="headerlink" title="2.3.1 基本用法"></a>2.3.1 基本用法</h4><blockquote>
 <p>首先进入<code>./src/index.tsx</code>导入我们的路由所需要的依赖包</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ./src/index.tsx</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> React <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> ReactDom <span class="keyword">from</span> <span class="string">"react-dom"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 引入redux这个库的Provider组件</span></span><br><span class="line"><span class="keyword">import</span> &#123; Provider &#125; <span class="keyword">from</span> <span class="string">"react-redux"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 引入路由</span></span><br><span class="line"><span class="comment">// 路由的容器:HashRouter as Router</span></span><br><span class="line"><span class="comment">// 路由的规格:Route</span></span><br><span class="line"><span class="comment">// Link组件</span></span><br><span class="line"><span class="keyword">import</span> &#123; BrowserRouter <span class="keyword">as</span> Router,Route,Link &#125; <span class="keyword">from</span> <span class="string">"react-router-dom"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 引入仓库</span></span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> CounterComponent <span class="keyword">from</span> <span class="string">"./components/Counter"</span>;</span><br><span class="line"><span class="keyword">import</span> CounterComponent2 <span class="keyword">from</span> <span class="string">"./components/Counter2"</span>;</span><br><span class="line"><span class="keyword">import</span> Counter <span class="keyword">from</span> <span class="string">"./components/Counter"</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Home</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>home<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用Provider包裹CounterComponent组件</span></span><br><span class="line"><span class="comment">// 并且把store传给Provider</span></span><br><span class="line"><span class="comment">// 这样Provider可以向它的子组件提供store</span></span><br><span class="line">ReactDom.render((</span><br><span class="line">  &lt;Provider store=&#123;store&#125;&gt;</span><br><span class="line">    &#123;<span class="comment">/* 路由组件 */</span>&#125;</span><br><span class="line">    &lt;Router&gt;</span><br><span class="line">      &#123;<span class="comment">/*  放两个路由规则需要在外层套个React.Fragment */</span>&#125;</span><br><span class="line">        &lt;React.Fragment&gt;</span><br><span class="line">            &#123;<span class="comment">/* 增加导航 */</span>&#125;</span><br><span class="line">            &lt;ul&gt;</span><br><span class="line">            &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">"/"</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span>&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">            &lt;li&gt;&lt;Link to="/</span>counter<span class="string">"&gt;Counter&lt;/Link&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li&gt;&lt;Link to="</span>/counter2<span class="string">"&gt;Counter2&lt;/Link&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;/ul&gt;</span></span><br><span class="line"><span class="string">            &#123;/* 当路径为 / 时是home组件 */&#125;</span></span><br><span class="line"><span class="string">            &#123;/* 为了避免home组件一直渲染，我们可以添加属性exact */&#125;</span></span><br><span class="line"><span class="string">            &lt;Route exact path="</span>/<span class="string">" component=&#123;Home&#125;/&gt;</span></span><br><span class="line"><span class="string">            &lt;Route path="</span>/counter<span class="string">" component=&#123;CounterComponent&#125;/&gt;</span></span><br><span class="line"><span class="string">            &lt;Route path="</span>/counter2<span class="string">" component=&#123;CounterComponent2&#125; /&gt;</span></span><br><span class="line"><span class="string">        &lt;/React.Fragment&gt;</span></span><br><span class="line"><span class="string">        &lt;/Router&gt;</span></span><br><span class="line"><span class="string">  &lt;/Provider&gt;</span></span><br><span class="line"><span class="string">),document.getElementById("</span>app<span class="string">"))</span></span><br></pre></td></tr></table></figure>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/549.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/549.png" alt></p>
 <blockquote>
 <p>但是有个很大的问题，就是我们直接访问<code>http://localhost:8080/counter</code>会找不到路由</p>
 </blockquote>

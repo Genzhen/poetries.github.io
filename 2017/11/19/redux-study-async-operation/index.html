@@ -23,13 +23,13 @@
 <meta property="og:site_name" content="Poetry&#39;s Blog">
 <meta property="og:description" content="一、创建同步Action Action是数据从应用传递到 store/state 的载体，也是开启一次完成数据流的开始  普通的action对象 const action = &amp;#123;	type:&apos;ADD_TODO&apos;,	name:&apos;poetries&apos;&amp;#125;dispatch(action) 封装action creator function actionCreator(data)&amp;#123">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/492.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/493.png">
-<meta property="og:updated_time" content="2020-08-10T15:44:44.938Z">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/492.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/493.png">
+<meta property="og:updated_time" content="2020-08-15T04:25:31.934Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redux之异步Action及操作（七）">
 <meta name="twitter:description" content="一、创建同步Action Action是数据从应用传递到 store/state 的载体，也是开启一次完成数据流的开始  普通的action对象 const action = &amp;#123;	type:&apos;ADD_TODO&apos;,	name:&apos;poetries&apos;&amp;#125;dispatch(action) 封装action creator function actionCreator(data)&amp;#123">
-<meta name="twitter:image" content="http://blog.poetries.top/img-repo/2019/10/492.png">
+<meta name="twitter:image" content="https://poetries1.gitee.io/img-repo/2019/10/492.png">
 
   
 
@@ -84,6 +84,8 @@
 
   <!-- 聊天系统 -->
   
+    
+   <link type="text/css" rel="stylesheet" href="/renxi/default.css">
    <style>
       #modal {
         position: static !important;
@@ -320,7 +322,7 @@
 <p><code>redux-promise</code>中间处理这种<code>action</code></p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">promiseAction</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>) =&gt;</span> &#123;</span><br><span class="line">        setTimeout(<span class="function">(<span class="params">param</span>)=&gt;</span>&#123;</span><br><span class="line">            resolve(&#123;</span><br><span class="line">                type:<span class="string">'ADD_TODO'</span>,</span><br><span class="line">                name</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;,<span class="number">3000</span>)</span><br><span class="line">    &#125;).then(<span class="function">(<span class="params">param</span>)=&gt;</span>&#123;</span><br><span class="line">        dispatch(action(<span class="string">"action2"</span>))</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;).then(<span class="function">(<span class="params">param</span>)=&gt;</span>&#123;</span><br><span class="line">        dispatch(action(<span class="string">"action3"</span>))</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="三、redux异步流程"><a href="#三、redux异步流程" class="headerlink" title="三、redux异步流程"></a>三、redux异步流程</h2><p><img src="http://blog.poetries.top/img-repo/2019/10/492.png" alt></p>
+<h2 id="三、redux异步流程"><a href="#三、redux异步流程" class="headerlink" title="三、redux异步流程"></a>三、redux异步流程</h2><p><img src="https://poetries1.gitee.io/img-repo/2019/10/492.png" alt></p>
 <ul>
 <li>首先发起一个action，然后通过中间件，这里为什么要用中间件呢，因为这样<code>dispatch</code>的返回值才能是一个函数。</li>
 <li>通过<code>store.dispatch</code>，将状态的的改变传给<code>store</code>的小弟<code>reducer</code>，<code>reducer</code>根据<code>action</code>的改变，传递新的状态<code>state</code>。</li>
@@ -419,7 +421,7 @@
 <blockquote>
 <p>这样就完成了<code>redux</code>的异步操作。其实最主要的区别还是<code>action</code>里面还有中间件的调用，其他的地方基本跟同步的<code>redux</code>差不多的。搞懂了中间件，就基本搞懂了<code>redux</code>的异步操作</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/493.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/493.png" alt></p>
 
       </div>
     

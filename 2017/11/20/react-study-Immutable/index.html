@@ -23,12 +23,12 @@
 <meta property="og:site_name" content="Poetry&#39;s Blog">
 <meta property="og:description" content="整理于互联网  一、前言 从问题说起：熟悉 React 组件生命周期的话都知道：调用 setState 方法总是会触发 render 方法从而进行 vdom re-render 相关逻辑，哪怕实际上你没有更改到 Component.state  this.state = &amp;#123;count: 0&amp;#125;this.setState(&amp;#123;count: 0&amp;#125;);// 组件 s">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/462.png">
-<meta property="og:updated_time" content="2020-08-10T15:44:44.938Z">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/462.png">
+<meta property="og:updated_time" content="2020-08-15T04:25:31.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React之Immutable学习记录（十二）">
 <meta name="twitter:description" content="整理于互联网  一、前言 从问题说起：熟悉 React 组件生命周期的话都知道：调用 setState 方法总是会触发 render 方法从而进行 vdom re-render 相关逻辑，哪怕实际上你没有更改到 Component.state  this.state = &amp;#123;count: 0&amp;#125;this.setState(&amp;#123;count: 0&amp;#125;);// 组件 s">
-<meta name="twitter:image" content="http://blog.poetries.top/img-repo/2019/10/462.png">
+<meta name="twitter:image" content="https://poetries1.gitee.io/img-repo/2019/10/462.png">
 
   
 
@@ -83,6 +83,8 @@
 
   <!-- 聊天系统 -->
   
+    
+   <link type="text/css" rel="stylesheet" href="/renxi/default.css">
    <style>
       #modal {
         position: static !important;
@@ -304,7 +306,7 @@
 <blockquote>
 <p>打印<code>immutableJS</code>看看有什么东西</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/462.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/462.png" alt></p>
 <p><strong>一个说明不可变的例子</strong></p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 原生对象</span></span><br><span class="line"><span class="keyword">let</span> a1 = &#123;</span><br><span class="line">    b: <span class="number">1</span>,</span><br><span class="line">    c: &#123;</span><br><span class="line">        c1: <span class="number">123</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> b1 = a1;</span><br><span class="line">b1.b = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a1.b, b1.b); <span class="comment">// 2, 2</span></span><br><span class="line"><span class="built_in">console</span>.log(a1 === b1); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(a1.c === b1.c); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// immutable.js 的Map</span></span><br><span class="line"><span class="keyword">let</span> a2 = Immutable.fromJS(&#123;</span><br><span class="line">    b: <span class="number">1</span>,</span><br><span class="line">    c: &#123;</span><br><span class="line">        c1: <span class="number">123</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> b2 = a2.set(<span class="string">'b'</span>, <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 对 Immutable 对象的任何修改或添加删除操作都会返回一个新的 Immutable 对象</span></span><br><span class="line"><span class="built_in">console</span>.log(a2.get(<span class="string">'b'</span>), b2.get(<span class="string">'b'</span>)); <span class="comment">// 1, 2  对象 a2 的 b 值并没有变成2。</span></span><br><span class="line"><span class="built_in">console</span>.log(a2 === b2); <span class="comment">//  false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//如果对象树中一个节点发生变化，只修改这个节点和受它影响的父节点，其它节点则进行共享。</span></span><br><span class="line"><span class="built_in">console</span>.log(a2.get(<span class="string">'c'</span>) === b2.get(<span class="string">'c'</span>)); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
 <h2 id="三、为什么要在React-js中使用Immutable"><a href="#三、为什么要在React-js中使用Immutable" class="headerlink" title="三、为什么要在React.js中使用Immutable"></a>三、为什么要在React.js中使用Immutable</h2><blockquote>

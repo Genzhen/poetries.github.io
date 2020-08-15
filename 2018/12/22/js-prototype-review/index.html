@@ -25,12 +25,12 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1480597-9b6c5ca4a84f967c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1480597-86427eafb257f868.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/343.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/343.png">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1480597-e4a91031a78eb153.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://github.com/mqyqingfeng/Blog/raw/master/Images/prototype5.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/344.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/345.png">
-<meta property="og:updated_time" content="2020-08-10T15:44:44.930Z">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/344.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/345.png">
+<meta property="og:updated_time" content="2020-08-15T04:25:31.926Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript原型链回顾">
 <meta name="twitter:description" content="一、JS内置对象 所谓的内置对象 指的是：JavaScript本身就自己有的对象 可以直接拿来就用。例如Array String 等等。JavaScript一共有12内置对象  函数类型(10个)  String Number Boolean Array Function Date RegExp Error Object Event   函数类型 有 __proto__和 prototype 属性">
@@ -89,6 +89,8 @@
 
   <!-- 聊天系统 -->
   
+    
+   <link type="text/css" rel="stylesheet" href="/renxi/default.css">
    <style>
       #modal {
         position: static !important;
@@ -312,7 +314,7 @@
 <blockquote>
 <p>打开浏览器的控制面板，随便输入一个<code>JS</code>内置的构造器函数，比如<code>Array</code>，控制台输出的是一个名为<code>Array</code>的函数体，这好像并没有什么稀奇的，但是，当你接着输入<code>Array.prototype</code>，控制面板输出了一堆我们经常用到的<code>Array</code>构造器的方法，把目光转移到最下方，有一个叫<code>__proto__</code>的属性，好奇的点开。列表列出的不是<code>Object</code>构造器的方法么，里边有我们非常熟悉的<code>hasOwnProperty</code>还有<code>toString</code>等方法。如果<code>Array</code>是构造器，那么控制面板输出的<code>Array.prototype</code>的所有属性中<code>constructor</code>又是什么构造器？点开看看，之后就像身处德罗斯特效应中一样，<code>__proto__</code>和<code>constructor</code>，还有<code>Array</code>构造器中常用的方法名不断的出现，一层套一层，一层层展开，没有尽头</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/343.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/343.png" alt></p>
 <blockquote>
 <p>拿<code>Array</code>举例，<code>Array.prototype</code>中有一个<code>constructor</code>属性，这个属性的值就是<code>Array</code>构造器自己</p>
 </blockquote>
@@ -399,11 +401,11 @@
 <h2 id="三、JSON和Math"><a href="#三、JSON和Math" class="headerlink" title="三、JSON和Math"></a>三、JSON和Math</h2><blockquote>
 <p><code>JS</code>内置的构造器函数都可以使用<code>new</code>关键字实例化一个对象，我们称实例化后的这个对象就是某某构造器的一个实例</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/344.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/344.png" alt></p>
 <blockquote>
 <p>我们试试<code>JSON</code> 和<code>Math</code> 能不能实例化对象</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/345.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/345.png" alt></p>
 <blockquote>
 <p><code>JSON</code>和<code>Math</code>不是构造器函数，他们是普通的对象。只有构造器函数才能使用<code>new</code>关键字实例化一个对象，而<code>JSON</code>和<code>Math</code>已经是对象了，所以我们可以不用实例化直接使用<code>JSON</code>和<code>Math</code>中的属性和方法</p>
 </blockquote>

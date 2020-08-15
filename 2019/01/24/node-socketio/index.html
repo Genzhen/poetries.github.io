@@ -23,17 +23,17 @@
 <meta property="og:site_name" content="Poetry&#39;s Blog">
 <meta property="og:description" content="第一部分 WebSocket一、WebSocket 解决了什么问题 客户端(浏览器)和服务器端进行通信，只能由客户端发起ajax请求，才能进行通信，服务器端无法主动向客户端推送信息 当出现类似体育赛事、聊天室、实时位置之类的场景时，客户端要获取服务器端的变化，就只能通过轮询(定时请求)来了解服务器端有没有新的信息变化  轮询效率低，非常浪费资源(需要不断发送请求，不停链接服务器)  WebSock">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/389.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/390.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/391.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/392.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/393.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/394.png">
-<meta property="og:updated_time" content="2020-08-10T15:44:44.934Z">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/389.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/390.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/391.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/392.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/393.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/394.png">
+<meta property="og:updated_time" content="2020-08-15T04:25:31.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nodejs系列之websocket及socket.io">
 <meta name="twitter:description" content="第一部分 WebSocket一、WebSocket 解决了什么问题 客户端(浏览器)和服务器端进行通信，只能由客户端发起ajax请求，才能进行通信，服务器端无法主动向客户端推送信息 当出现类似体育赛事、聊天室、实时位置之类的场景时，客户端要获取服务器端的变化，就只能通过轮询(定时请求)来了解服务器端有没有新的信息变化  轮询效率低，非常浪费资源(需要不断发送请求，不停链接服务器)  WebSock">
-<meta name="twitter:image" content="http://blog.poetries.top/img-repo/2019/10/389.png">
+<meta name="twitter:image" content="https://poetries1.gitee.io/img-repo/2019/10/389.png">
 
   
 
@@ -88,6 +88,8 @@
 
   <!-- 聊天系统 -->
   
+    
+   <link type="text/css" rel="stylesheet" href="/renxi/default.css">
    <style>
       #modal {
         position: static !important;
@@ -290,7 +292,7 @@
 <blockquote>
 <p>上述栗子中<code>WebSocket</code>的接口地址出自：<code>WebSocket</code> 在线测试，在开发的时候也可以用于测试后端给的地址是否可用</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/389.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/389.png" alt></p>
 <h2 id="二、webSocket的class类"><a href="#二、webSocket的class类" class="headerlink" title="二、webSocket的class类"></a>二、webSocket的class类</h2><blockquote>
 <p>当项目中很多地方使用<code>WebSocket</code>，把它封成一个<code>class</code>类，是更好的选择</p>
 </blockquote>
@@ -363,14 +365,14 @@
 <blockquote>
 <p><code>socket对象</code></p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/390.png" alt><br><img src="http://blog.poetries.top/img-repo/2019/10/391.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/390.png" alt><br><img src="https://poetries1.gitee.io/img-repo/2019/10/391.png" alt></p>
 <h3 id="1-3-服务器端通过emit广播，通过on接收广播"><a href="#1-3-服务器端通过emit广播，通过on接收广播" class="headerlink" title="1.3 服务器端通过emit广播，通过on接收广播"></a>1.3 服务器端通过emit广播，通过on接收广播</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// app.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">"http"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> server = http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(req.url == <span class="string">"/"</span>)&#123; <span class="comment">//显示首页</span></span><br><span class="line">        fs.readFile(<span class="string">"./index.html"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123; </span><br><span class="line">            res.end(data);</span><br><span class="line">        &#125;); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> io = <span class="built_in">require</span>(<span class="string">'socket.io'</span>)(server);</span><br><span class="line"></span><br><span class="line"><span class="comment">//监听连接事件 </span></span><br><span class="line">io.on(<span class="string">'connection'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">socket</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'和服务器建立连接了'</span>);</span><br><span class="line">    </span><br><span class="line">    socket.on(<span class="string">'to-server'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">    </span><br><span class="line">        <span class="comment">// 接收客户端传过来的数据</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'客户端说:'</span> + data);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 向客户端发送数据</span></span><br><span class="line">        <span class="comment">// socket 只给当前发送消息给服务端的客户端发送消息</span></span><br><span class="line">        socket.emit(<span class="string">'to-client'</span>,<span class="string">'我是服务器返回的数据'</span>);</span><br><span class="line">        </span><br><span class="line">    &#125;) </span><br><span class="line">    socket.on(<span class="string">'disconnect'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'断开连接了'</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">server.listen(<span class="number">3000</span>,<span class="string">"127.0.0.1"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'app run at 127.0.0.1:3000'</span>)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/392.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/392.png" alt></p>
 <blockquote>
 <p>每一个连接上来的用户，都有一个 <code>socket</code>。由于我们的 <code>emit</code> 语句，是 <code>socket.emit()</code>发 出的，所以指的是向这个客户端发出语句。<br>广播，就是给所有当前连接的用户发送信息:</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> io = <span class="built_in">require</span>(<span class="string">'socket.io'</span>)(server);</span><br><span class="line"></span><br><span class="line">io.on(<span class="string">'connection'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">socket</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'和服务器建立连接了'</span>)</span><br><span class="line">    </span><br><span class="line">    socket.on(<span class="string">'to-server'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">    </span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'客户端说:'</span> + data);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// io 给所有建立连接的客户端发送数据，不管是哪个客户端发送消息，都会对所有客户端进行广播一次</span></span><br><span class="line">        io.emit(<span class="string">'to-client'</span>,<span class="string">'我是服务器返回的数据'</span>);</span><br><span class="line">    &#125;) </span><br><span class="line">    socket.on(<span class="string">'disconnect'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'断开连接了'</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/393.png" alt><br><img src="http://blog.poetries.top/img-repo/2019/10/394.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/393.png" alt><br><img src="https://poetries1.gitee.io/img-repo/2019/10/394.png" alt></p>
 <ul>
 <li><code>io.emit()</code>可以实现聊天室消息群发</li>
 <li><code>socket.emit()</code>可以实现聊天机器人，一对一发送</li>

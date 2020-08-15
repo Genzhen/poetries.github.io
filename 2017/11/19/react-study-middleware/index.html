@@ -23,13 +23,13 @@
 <meta property="og:site_name" content="Poetry&#39;s Blog">
 <meta property="og:description" content="一、前言 在redux里，middleware是发送action和action到达reducer之间的第三方扩展，也就是中间层。也可以这样说，middleware是架在action和store之间的一座桥梁 在redux里，action仅仅是携带了数据的普通js对象   Reducer 拆分可以使组件获取其最小属性(state)，而不需要整个Store。中间件则可以在Action Creator">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/466.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/467.png">
-<meta property="og:updated_time" content="2020-08-10T15:44:44.938Z">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/466.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/467.png">
+<meta property="og:updated_time" content="2020-08-15T04:25:31.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redux之浅析中间件（八）">
 <meta name="twitter:description" content="一、前言 在redux里，middleware是发送action和action到达reducer之间的第三方扩展，也就是中间层。也可以这样说，middleware是架在action和store之间的一座桥梁 在redux里，action仅仅是携带了数据的普通js对象   Reducer 拆分可以使组件获取其最小属性(state)，而不需要整个Store。中间件则可以在Action Creator">
-<meta name="twitter:image" content="http://blog.poetries.top/img-repo/2019/10/466.png">
+<meta name="twitter:image" content="https://poetries1.gitee.io/img-repo/2019/10/466.png">
 
   
 
@@ -84,6 +84,8 @@
 
   <!-- 聊天系统 -->
   
+    
+   <link type="text/css" rel="stylesheet" href="/renxi/default.css">
    <style>
       #modal {
         position: static !important;
@@ -309,11 +311,11 @@
 <p>因此，上面那个<code>ActionCreator</code>就可以改写为这样：因为<code>action</code>的返回值是一个函数</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> asyncSayActionCreator = <span class="function"><span class="keyword">function</span> (<span class="params">message</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">dispatch</span>) </span>&#123;</span><br><span class="line">        setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            dispatch(&#123;</span><br><span class="line">                type: <span class="string">'SAY'</span>,</span><br><span class="line">                message</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;, <span class="number">2000</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/466.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/466.png" alt></p>
 <ul>
 <li>上图表达的是 <code>redux</code> 中一个简单的同步数据流动的场景，点击<code>button</code> 后，在回调中 <code>dispatch</code> 一个 <code>action</code>，<code>reducer</code> 收到<code>action</code> 后，更新 <code>state</code> 并通知 <code>view</code> 重新渲染</li>
 </ul>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/467.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/467.png" alt></p>
 <ul>
 <li>上面这张图展示了应用<code>middleware</code> 后 <code>redux</code> 处理事件的逻辑，每一个 <code>middleware</code> 处理一个相对独立的业务需求，通过串联不同的 <code>middleware</code>，实现变化多样的的功能。那么问题来了：<ul>
 <li><code>middleware</code> 怎么写？</li>

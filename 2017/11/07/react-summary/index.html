@@ -23,25 +23,25 @@
 <meta property="og:site_name" content="Poetry&#39;s Blog">
 <meta property="og:description" content="来源于互联网  一、npm的配置 切换淘宝镜像源  npm config set registry https://registry.npm.taobao.orgnpm config get registrynpm install -g cnpm --registry=https://registry.npm.taobao.org  使用npm安装react  cnpm install reac">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/470.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/471.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/472.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/473.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/474.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/475.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/478.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/479.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/480.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/481.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/482.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/477.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/476.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/483.png">
-<meta property="og:updated_time" content="2020-08-10T15:44:44.938Z">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/470.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/471.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/472.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/473.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/474.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/475.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/478.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/479.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/480.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/481.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/482.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/477.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/476.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/483.png">
+<meta property="og:updated_time" content="2020-08-15T04:25:31.934Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react知识点回顾">
 <meta name="twitter:description" content="来源于互联网  一、npm的配置 切换淘宝镜像源  npm config set registry https://registry.npm.taobao.orgnpm config get registrynpm install -g cnpm --registry=https://registry.npm.taobao.org  使用npm安装react  cnpm install reac">
-<meta name="twitter:image" content="http://blog.poetries.top/img-repo/2019/10/470.png">
+<meta name="twitter:image" content="https://poetries1.gitee.io/img-repo/2019/10/470.png">
 
   
 
@@ -96,6 +96,8 @@
 
   <!-- 聊天系统 -->
   
+    
+   <link type="text/css" rel="stylesheet" href="/renxi/default.css">
    <style>
       #modal {
         position: static !important;
@@ -371,16 +373,16 @@
 <blockquote>
 <p>比如说设置了<code>value</code>的<code>&lt;input&gt;</code> 是一个受控组件。对于受控的<code>&lt;input&gt;</code>，渲染出来的<code>html</code>元素始终保持着<code>value</code>属性的值，如以下代码</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/470.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/470.png" alt></p>
 <ul>
 <li>此时如果想要更新用户的值。需要使用<code>onChange</code>事件</li>
 </ul>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/471.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/471.png" alt></p>
 <p><strong>非受控组件</strong></p>
 <blockquote>
 <p>即没有设置<code>value</code>或者设置为<code>null</code>的是一个非受控组件，对于非受控的<code>input</code>组件，用户的输入会直接反映在页面上</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/472.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/472.png" alt></p>
 <ul>
 <li>上面的代码渲染出一个空值的输入框，用户的输入立即会反映在元素上</li>
 <li>和受控组件一样，使用<code>onChange</code>事件来监听值的变化，如果想要给组件设置一个非空的初始值。可以使用<code>defaultValue</code>属</li>
@@ -483,7 +485,7 @@
 <li><code>componentWillReceiveProps</code> 已加载组件收到新的参数时调用</li>
 <li><code>shouldComponentUpdate</code>组件判断是否重新渲染时调用</li>
 </ul>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/473.png" alt><br><img src="http://blog.poetries.top/img-repo/2019/10/474.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/473.png" alt><br><img src="https://poetries1.gitee.io/img-repo/2019/10/474.png" alt></p>
 <p><strong>componentDidMount</strong></p>
 <blockquote>
 <p>在此方法中可进行</p>
@@ -520,7 +522,7 @@
 <p><strong>select</strong></p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--HTML--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"grapefruit"</span>&gt;</span>Grapefruit<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"lime"</span>&gt;</span>Lime<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">selected</span> <span class="attr">value</span>=<span class="string">"coconut"</span>&gt;</span>Coconut<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"mango"</span>&gt;</span>Mango<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--jsx--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">value</span>=<span class="string">&#123;this.state.value&#125;</span> <span class="attr">onChange</span>=<span class="string">&#123;this.handleChange&#125;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"grapefruit"</span>&gt;</span>Grapefruit<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"lime"</span>&gt;</span>Lime<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"coconut"</span>&gt;</span>Coconut<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"mango"</span>&gt;</span>Mango<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="7-3-事件"><a href="#7-3-事件" class="headerlink" title="7.3 事件"></a>7.3 事件</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--HTML--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"activateLasers()"</span>&gt;</span></span><br><span class="line">  Activate Lasers</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--jsx--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;activateLasers&#125;</span>&gt;</span></span><br><span class="line">  Activate Lasers</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="八、redux-router"><a href="#八、redux-router" class="headerlink" title="八、redux-router"></a>八、redux-router</h2><p><img src="http://blog.poetries.top/img-repo/2019/10/475.png" alt></p>
+<h2 id="八、redux-router"><a href="#八、redux-router" class="headerlink" title="八、redux-router"></a>八、redux-router</h2><p><img src="https://poetries1.gitee.io/img-repo/2019/10/475.png" alt></p>
 <h3 id="8-1、基本用法"><a href="#8-1、基本用法" class="headerlink" title="8.1、基本用法"></a>8.1、基本用法</h3><blockquote>
 <p>使用时，路由器<code>Router</code>就是<code>React</code>的一个组件</p>
 </blockquote>
@@ -846,7 +848,7 @@
 <li>你可以把所有子 <code>Reducer</code> 放在一个文件里面，然后统一引入</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; combineReducers &#125; <span class="keyword">from</span> <span class="string">'redux'</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> reducers <span class="keyword">from</span> <span class="string">'./reducers'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> reducer = combineReducers(reducers)</span><br></pre></td></tr></table></figure>
-<h3 id="9-4-工作流程"><a href="#9-4-工作流程" class="headerlink" title="9.4 工作流程"></a>9.4 工作流程</h3><p><img src="http://blog.poetries.top/img-repo/2019/10/478.png" alt><br><img src="http://blog.poetries.top/img-repo/2019/10/479.png" alt><br><img src="http://blog.poetries.top/img-repo/2019/10/480.png" alt><br><img src="http://blog.poetries.top/img-repo/2019/10/481.png" alt><br><img src="http://blog.poetries.top/img-repo/2019/10/482.png" alt></p>
+<h3 id="9-4-工作流程"><a href="#9-4-工作流程" class="headerlink" title="9.4 工作流程"></a>9.4 工作流程</h3><p><img src="https://poetries1.gitee.io/img-repo/2019/10/478.png" alt><br><img src="https://poetries1.gitee.io/img-repo/2019/10/479.png" alt><br><img src="https://poetries1.gitee.io/img-repo/2019/10/480.png" alt><br><img src="https://poetries1.gitee.io/img-repo/2019/10/481.png" alt><br><img src="https://poetries1.gitee.io/img-repo/2019/10/482.png" alt></p>
 <ul>
 <li>首先，用户发出 <code>Action</code></li>
 </ul>
@@ -873,7 +875,7 @@
 <li><p>怎么才能 <code>Reducer</code> 在异步操作结束后自动执行呢？这就要用到新的工具：中间件（<code>middleware</code>）</p>
 </li>
 </ul>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/477.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/477.png" alt></p>
 <h3 id="10-1-中间件的概念"><a href="#10-1-中间件的概念" class="headerlink" title="10.1 中间件的概念"></a>10.1 中间件的概念</h3><blockquote>
 <p>中间件就是一个函数，对<code>store.dispatch</code>方法进行了改造，在发出 <code>Action</code> 和执行 <code>Reducer</code> 这两步之间，添加了其他功能。</p>
 </blockquote>
@@ -941,7 +943,7 @@
 <ul>
 <li>下面就是<code>fetchPosts</code>的代码，关键之处就在里面</li>
 </ul>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/476.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/476.png" alt></p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> fetchPosts = <span class="function"><span class="params">postTitle</span> =&gt;</span> <span class="function">(<span class="params">dispatch, getState</span>) =&gt;</span> &#123;</span><br><span class="line">  dispatch(requestPosts(postTitle));</span><br><span class="line">  <span class="keyword">return</span> fetch(<span class="string">`/some/API/<span class="subst">$&#123;postTitle&#125;</span>.json`</span>)</span><br><span class="line">    .then(<span class="function"><span class="params">response</span> =&gt;</span> response.json())</span><br><span class="line">    .then(<span class="function"><span class="params">json</span> =&gt;</span> dispatch(receivePosts(postTitle, json)));</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用方法一</span></span><br><span class="line">store.dispatch(fetchPosts(<span class="string">'reactjs'</span>));</span><br><span class="line"><span class="comment">// 使用方法二</span></span><br><span class="line">store.dispatch(fetchPosts(<span class="string">'reactjs'</span>)).then(<span class="function"><span class="params">()</span> =&gt;</span></span><br><span class="line">  <span class="built_in">console</span>.log(store.getState())</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>上面代码中，<code>fetchPosts</code>是一个<code>Action Creator</code>（动作生成器），返回一个函数。这个函数执行后，先发出一个<code>Action（requestPosts(postTitle)</code>），然后进行异步操作。拿到结果后，先将结果转成 <code>JSON</code> 格式，然后再发出一个 <code>Action（ receivePosts(postTitle, json)</code>）</p>
@@ -1116,7 +1118,7 @@
 <p>最后，生成<code>store</code>对象，并使用<code>Provider</code>在根组件外面包一层</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">'prop-types'</span></span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span></span><br><span class="line"><span class="keyword">import</span> &#123; createStore &#125; <span class="keyword">from</span> <span class="string">'redux'</span></span><br><span class="line"><span class="keyword">import</span> &#123; Provider, connect &#125; <span class="keyword">from</span> <span class="string">'react-redux'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// React component</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Counter</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; value, onIncreaseClick &#125; = <span class="keyword">this</span>.props</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;span&gt;&#123;value&#125;&lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">        &lt;button onClick=&#123;onIncreaseClick&#125;&gt;Increase&lt;/</span>button&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">Counter.propTypes = &#123;</span></span><br><span class="line"><span class="regexp">  value: PropTypes.number.isRequired,</span></span><br><span class="line"><span class="regexp">  onIncreaseClick: PropTypes.func.isRequired</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ Action</span></span><br><span class="line"><span class="regexp">const increaseAction = &#123; type: 'increase' &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ Reducer</span></span><br><span class="line"><span class="regexp">function counter(state = &#123; count: 0 &#125;, action) &#123;</span></span><br><span class="line"><span class="regexp">  const count = state.count</span></span><br><span class="line"><span class="regexp">  switch (action.type) &#123;</span></span><br><span class="line"><span class="regexp">    case 'increase':</span></span><br><span class="line"><span class="regexp">      return &#123; count: count + 1 &#125;</span></span><br><span class="line"><span class="regexp">    default:</span></span><br><span class="line"><span class="regexp">      return state</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ Store</span></span><br><span class="line"><span class="regexp">const store = createStore(counter)</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ Map Redux state to component props</span></span><br><span class="line"><span class="regexp">function mapStateToProps(state) &#123;</span></span><br><span class="line"><span class="regexp">  return &#123;</span></span><br><span class="line"><span class="regexp">    value: state.count</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ Map Redux actions to component props</span></span><br><span class="line"><span class="regexp">function mapDispatchToProps(dispatch) &#123;</span></span><br><span class="line"><span class="regexp">  return &#123;</span></span><br><span class="line"><span class="regexp">    onIncreaseClick: () =&gt; dispatch(increaseAction)</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ Connected Component</span></span><br><span class="line"><span class="regexp">const App = connect(</span></span><br><span class="line"><span class="regexp">  mapStateToProps,</span></span><br><span class="line"><span class="regexp">  mapDispatchToProps</span></span><br><span class="line"><span class="regexp">)(Counter)</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">ReactDOM.render(</span></span><br><span class="line"><span class="regexp">  &lt;Provider store=&#123;store&#125;&gt;</span></span><br><span class="line"><span class="regexp">    &lt;App /</span>&gt;</span><br><span class="line">  &lt;<span class="regexp">/Provider&gt;,</span></span><br><span class="line"><span class="regexp">  document.getElementById('root')</span></span><br><span class="line"><span class="regexp">)</span></span><br></pre></td></tr></table></figure>
-<h2 id="十二、思维导图总结"><a href="#十二、思维导图总结" class="headerlink" title="十二、思维导图总结"></a>十二、思维导图总结</h2><p><img src="http://blog.poetries.top/img-repo/2019/10/483.png" alt></p>
+<h2 id="十二、思维导图总结"><a href="#十二、思维导图总结" class="headerlink" title="十二、思维导图总结"></a>十二、思维导图总结</h2><p><img src="https://poetries1.gitee.io/img-repo/2019/10/483.png" alt></p>
 
       </div>
     

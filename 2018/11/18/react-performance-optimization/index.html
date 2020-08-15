@@ -23,19 +23,19 @@
 <meta property="og:site_name" content="Poetry&#39;s Blog">
 <meta property="og:description" content="一、重新认识render react的组件渲染分为初始化渲染和更新渲染   在初始化渲染的时候会调用根组件下的所有组件的render方法进行渲染，如下图（绿色表示已渲染，这一层是没有问题的）   但是当我们要更新某个子组件的时候，如下图的绿色组件（从根组件传递下来应用在绿色组件上的数据发生改变）  我们的理想状态是只调用关键路径上组件的render  但是react的默认做法是调用所有组件的ren">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/420.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/421.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/422.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/423.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/424.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/425.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/426.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/427.png">
-<meta property="og:updated_time" content="2020-08-10T15:44:44.934Z">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/420.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/421.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/422.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/423.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/424.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/425.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/426.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/427.png">
+<meta property="og:updated_time" content="2020-08-15T04:25:31.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React性能优化总结">
 <meta name="twitter:description" content="一、重新认识render react的组件渲染分为初始化渲染和更新渲染   在初始化渲染的时候会调用根组件下的所有组件的render方法进行渲染，如下图（绿色表示已渲染，这一层是没有问题的）   但是当我们要更新某个子组件的时候，如下图的绿色组件（从根组件传递下来应用在绿色组件上的数据发生改变）  我们的理想状态是只调用关键路径上组件的render  但是react的默认做法是调用所有组件的ren">
-<meta name="twitter:image" content="http://blog.poetries.top/img-repo/2019/10/420.png">
+<meta name="twitter:image" content="https://poetries1.gitee.io/img-repo/2019/10/420.png">
 
   
 
@@ -90,6 +90,8 @@
 
   <!-- 聊天系统 -->
   
+    
+   <link type="text/css" rel="stylesheet" href="/renxi/default.css">
    <style>
       #modal {
         position: static !important;
@@ -282,13 +284,13 @@
 <ul>
 <li>在初始化渲染的时候会调用根组件下的所有组件的<code>render</code>方法进行渲染，如下图（绿色表示已渲染，这一层是没有问题的）</li>
 </ul>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/420.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/420.png" alt></p>
 <p>但是当我们要更新某个子组件的时候，如下图的绿色组件（从根组件传递下来应用在绿色组件上的数据发生改变）</p>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/421.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/421.png" alt></p>
 <p>我们的理想状态是只调用关键路径上组件的render</p>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/422.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/422.png" alt></p>
 <p>但是<code>react</code>的默认做法是调用所有组件的<code>render</code>，再对生成的虚拟<code>DOM</code>进行对比，如不变则不进行更新。这样的<code>render</code>和虚拟<code>DOM</code>的 对比 明显是在浪费，如下图（黄色表示浪费的<code>render</code>和虚拟<code>DOM</code>对比）</p>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/423.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/423.png" alt></p>
 <p><strong>Tips</strong></p>
 <ul>
 <li>拆分组件是有利于复用和组件优化的</li>
@@ -331,15 +333,15 @@
 <li>打开<code>console</code>面板，先输入 <code>Perf.start()</code> 执行一些组件操作，引起数据变动，组件更新，然后输入 <code>Perf.stop()</code> 。（建议一次只执行一个操作，好进行分析）</li>
 <li>再输入 <code>Perf.printInclusive</code> 查看所有涉及到的组件<code>render</code>，如下图（官方图片）</li>
 </ul>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/424.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/424.png" alt></p>
 <blockquote>
 <p>或者输入<code>Perf.printWasted()</code>查看下不需要的的浪费组件<code>render</code></p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/425.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/425.png" alt></p>
 <p>优化前</p>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/426.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/426.png" alt></p>
 <p>优化后</p>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/427.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/427.png" alt></p>
 <h2 id="五、参考文章"><a href="#五、参考文章" class="headerlink" title="五、参考文章"></a>五、参考文章</h2><ul>
 <li><a href="https://reactjs.org/docs/optimizing-performance.html#profiling-components-with-the-chrome-performance-tab" target="_blank" rel="noopener">react官方的性能优化optimizing-performance</a></li>
 </ul>

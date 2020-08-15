@@ -23,15 +23,15 @@
 <meta property="og:site_name" content="Poetry&#39;s Blog">
 <meta property="og:description" content="一、setState异步更新 我们都知道，React通过this.state来访问state，通过this.setState()方法来更新state。当this.setState()方法被调用的时候，React会重新调用render方法来重新渲染UI 首先如果直接在setState后面获取state的值是获取不到的。在React内部机制能检测到的地方， setState就是异步的；在React检测">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/431.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/432.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/433.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/434.png">
-<meta property="og:updated_time" content="2020-08-10T15:44:44.938Z">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/431.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/432.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/433.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/434.png">
+<meta property="og:updated_time" content="2020-08-15T04:25:31.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React之setState原理分析">
 <meta name="twitter:description" content="一、setState异步更新 我们都知道，React通过this.state来访问state，通过this.setState()方法来更新state。当this.setState()方法被调用的时候，React会重新调用render方法来重新渲染UI 首先如果直接在setState后面获取state的值是获取不到的。在React内部机制能检测到的地方， setState就是异步的；在React检测">
-<meta name="twitter:image" content="http://blog.poetries.top/img-repo/2019/10/431.png">
+<meta name="twitter:image" content="https://poetries1.gitee.io/img-repo/2019/10/431.png">
 
   
 
@@ -86,6 +86,8 @@
 
   <!-- 聊天系统 -->
   
+    
+   <link type="text/css" rel="stylesheet" href="/renxi/default.css">
    <style>
       #modal {
         position: static !important;
@@ -276,11 +278,11 @@
 <li>我们都知道，<code>React</code>通过<code>this.state</code>来访问<code>state</code>，通过<code>this.setState()</code>方法来更新<code>state</code>。当<code>this.setState()</code>方法被调用的时候，<code>React</code>会重新调用<code>render</code>方法来重新渲染<code>UI</code></li>
 <li>首先如果直接在<code>setState</code>后面获取<code>state</code>的值是获取不到的。在<code>React</code>内部机制能检测到的地方， <code>setState</code>就是异步的；<code>在React</code>检测不到的地方，例如<code>setInterval</code>,<code>setTimeout</code>，<code>setState</code>就是同步更新的</li>
 </ul>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/431.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/431.png" alt></p>
 <blockquote>
 <p>因为<code>setState</code>是可以接受两个参数的，一个<code>state</code>，一个回调函数。因此我们可以在回调函数里面获取值</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/432.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/432.png" alt></p>
 <ul>
 <li><code>setState</code>方法通过一个队列机制实现<code>state</code>更新，当执行<code>setState</code>的时候，会将需要更新的<code>state</code>合并之后放入状态队列，而不会立即更新<code>this.state</code></li>
 <li>如果我们不使用<code>setState</code>而是使用<code>this.state.key</code>来修改，将不会触发组件的<code>re-render</code>。</li>
@@ -289,12 +291,12 @@
 <h3 id="1-1-setState批量更新的过程"><a href="#1-1-setState批量更新的过程" class="headerlink" title="1.1 setState批量更新的过程"></a>1.1 setState批量更新的过程</h3><blockquote>
 <p>在<code>react</code>生命周期和合成事件执行前后都有相应的钩子，分别是<code>pre</code>钩子和<code>post</code>钩子，<code>pre</code>钩子会调用<code>batchedUpdate</code>方法将<code>isBatchingUpdates</code>变量置为<code>true</code>，开启批量更新，而<code>post</code>钩子会将<code>isBatchingUpdates</code>置为<code>false</code></p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/433.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/433.png" alt></p>
 <ul>
 <li><code>isBatchingUpdates</code>变量置为<code>true</code>，则会走批量更新分支，<code>setState</code>的更新会被存入队列中，待同步代码执行完后，再执行队列中的<code>state</code>更新。 <code>isBatchingUpdates</code>为 <code>true</code>，则把当前组件（即调用了 <code>setState</code>的组件）放入 <code>dirtyComponents</code> 数组中；否则 <code>batchUpdate</code> 所有队列中的更新</li>
 <li>而在原生事件和异步操作中，不会执行<code>pre</code>钩子，或者生命周期的中的异步操作之前执行了<code>pre</code>钩子，但是<code>pos</code>钩子也在异步操作之前执行完了，<code>isBatchingUpdates</code>必定为<code>false</code>，也就不会进行批量更新</li>
 </ul>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/434.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/434.png" alt></p>
 <blockquote>
 <p><code>enqueueUpdate</code>包含了<code>React</code>避免重复<code>render</code>的逻辑。<code>mountComponent</code>和<code>updateComponent</code>方法在执行的最开始，会调用到<code>batchedUpdates</code>进行批处理更新，此时会将<code>isBatchingUpdates</code>设置为<code>true</code>，也就是将状态标记为现在正处于更新阶段了。 <code>isBatchingUpdates</code>为 <code>true</code>，则把当前组件（即调用了 <code>setState</code> 的组件）放入<code>dirtyComponents</code> 数组中；否则 <code>batchUpdate</code> 所有队列中的更新</p>
 </blockquote>

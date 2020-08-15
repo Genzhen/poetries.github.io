@@ -23,13 +23,13 @@
 <meta property="og:site_name" content="Poetry&#39;s Blog">
 <meta property="og:description" content="javascript是一门单线程语言，在最新的HTML5中提出了Web-Worker，但javascript是单线程这一核心仍未改变。所以一切javascript版的”多线程”都是用单线程模拟出来的，一切javascript多线程都是纸老虎  一、javascript事件循环 既然js是单线程，那就像只有一个窗口的银行，客户需要排队一个一个办理业务，同理js任务也要一个一个顺序执行。如果一个任务">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/20190922/event-loop-1.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/20190922/event-loop-2.png">
-<meta property="og:updated_time" content="2020-08-10T15:44:44.902Z">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/20190922/event-loop-1.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/20190922/event-loop-2.png">
+<meta property="og:updated_time" content="2020-08-15T04:25:31.898Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="彻底弄懂 JavaScript 执行机制[转]">
 <meta name="twitter:description" content="javascript是一门单线程语言，在最新的HTML5中提出了Web-Worker，但javascript是单线程这一核心仍未改变。所以一切javascript版的”多线程”都是用单线程模拟出来的，一切javascript多线程都是纸老虎  一、javascript事件循环 既然js是单线程，那就像只有一个窗口的银行，客户需要排队一个一个办理业务，同理js任务也要一个一个顺序执行。如果一个任务">
-<meta name="twitter:image" content="http://blog.poetries.top/img-repo/20190922/event-loop-1.png">
+<meta name="twitter:image" content="https://poetries1.gitee.io/img-repo/20190922/event-loop-1.png">
 
   
 
@@ -84,6 +84,8 @@
 
   <!-- 聊天系统 -->
   
+    
+   <link type="text/css" rel="stylesheet" href="/renxi/default.css">
    <style>
       #modal {
         position: static !important;
@@ -283,7 +285,7 @@
 <blockquote>
 <p>当我们打开网站时，网页的渲染过程就是一大堆同步任务，比如页面骨架和页面元素的渲染。而像加载图片音乐之类占用资源大耗时久的任务，就是异步任务。关于这部分有严格的文字定义，但本文的目的是用最小的学习成本彻底弄懂执行机制，所以我们用导图来说明</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/20190922/event-loop-1.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/20190922/event-loop-1.png" alt></p>
 <ul>
 <li>同步和异步任务分别进入不同的执行”场所”，同步的进入主线程，异步的进入<code>Event Table</code>并注册函数。</li>
 <li>当指定的事情完成时，<code>Event Table</code>会将这个函数移入<code>Event Queue</code>。</li>
@@ -371,7 +373,7 @@
 <blockquote>
 <p>事件循环，宏任务，微任务的关系如图所示：</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/20190922/event-loop-2.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/20190922/event-loop-2.png" alt></p>
 <blockquote>
 <p>我们来分析一段较复杂的代码，看看你是否真的掌握了js的执行机制</p>
 </blockquote>

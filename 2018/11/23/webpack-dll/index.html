@@ -23,16 +23,16 @@
 <meta property="og:site_name" content="Poetry&#39;s Blog">
 <meta property="og:description" content="博客链接 http://blog.poetries.top/2018/11/23/webpack-dll  一、webpack的dll功能 基于webpack3构建  1.1 dll介绍 我们构建前端项目的时候，往往希望第三方库（vendors）和自己写的代码可以分开打包，因为第三方库往往不需要经常打包更新。对此Webpack的文档建议用CommonsChunkPlugin来单独打包第三方库">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/639.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/640.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/641.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/642.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/643.png">
-<meta property="og:updated_time" content="2020-08-10T15:44:44.946Z">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/639.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/640.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/641.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/642.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/643.png">
+<meta property="og:updated_time" content="2020-08-15T04:25:31.942Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="dll预编译提高webpack打包速度">
 <meta name="twitter:description" content="博客链接 http://blog.poetries.top/2018/11/23/webpack-dll  一、webpack的dll功能 基于webpack3构建  1.1 dll介绍 我们构建前端项目的时候，往往希望第三方库（vendors）和自己写的代码可以分开打包，因为第三方库往往不需要经常打包更新。对此Webpack的文档建议用CommonsChunkPlugin来单独打包第三方库">
-<meta name="twitter:image" content="http://blog.poetries.top/img-repo/2019/10/639.png">
+<meta name="twitter:image" content="https://poetries1.gitee.io/img-repo/2019/10/639.png">
 
   
 
@@ -87,6 +87,8 @@
 
   <!-- 聊天系统 -->
   
+    
+   <link type="text/css" rel="stylesheet" href="/renxi/default.css">
    <style>
       #modal {
         position: static !important;
@@ -290,7 +292,7 @@
 <blockquote>
 <p>通常为了对抗缓存，我们会给售出文件的文件名中加入<code>hash</code>的后缀——但是——我们编辑了<code>app</code>部分的代码后，重新打包，发现<code>vendor</code>的<code>hash</code>也变化了</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/639.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/639.png" alt></p>
 <blockquote>
 <p>这么一来，意味着每次发布版本的时候，vendor代码都要刷新，即使我并没有修改其中的代码。这样并不符合我们分开打包的初衷</p>
 </blockquote>
@@ -325,14 +327,14 @@
 <blockquote>
 <p><code>Webpack</code>将每个库都进行了编号索引，之后的<code>dll user</code>可以读取这个文件，直接用<code>id</code>来引用</p>
 </blockquote>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/640.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/640.png" alt></p>
 <p><strong>第三步： 在plugins中增加配置</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// build/webpack.prod.conf.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">   plugins: [</span><br><span class="line">        <span class="keyword">new</span> webpack.DllReferencePlugin(&#123;</span><br><span class="line">          manifest: <span class="built_in">require</span>(<span class="string">'../dll/react-manifest.json'</span>)</span><br><span class="line">        &#125;),</span><br><span class="line">        <span class="keyword">new</span> webpack.DllReferencePlugin(&#123;</span><br><span class="line">          manifest: <span class="built_in">require</span>(<span class="string">'../dll/ui-manifest.json'</span>)</span><br><span class="line">        &#125;),</span><br><span class="line">        <span class="keyword">new</span> webpack.DllReferencePlugin(&#123;</span><br><span class="line">          manifest: <span class="built_in">require</span>(<span class="string">'../dll/others-manifest.json'</span>)</span><br><span class="line">        &#125;)</span><br><span class="line">   ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>再次执行<code>npm run build</code></p>
 </blockquote>
-<p>之前<br><img src="http://blog.poetries.top/img-repo/2019/10/641.png" alt></p>
-<p>之后<br><img src="http://blog.poetries.top/img-repo/2019/10/642.png" alt></p>
+<p>之前<br><img src="https://poetries1.gitee.io/img-repo/2019/10/641.png" alt></p>
+<p>之后<br><img src="https://poetries1.gitee.io/img-repo/2019/10/642.png" alt></p>
 <h2 id="二、happypack-多线程打包"><a href="#二、happypack-多线程打包" class="headerlink" title="二、happypack 多线程打包"></a>二、happypack 多线程打包</h2><blockquote>
 <p>一般情况下，js是单线程执行的，但<code>node</code>不是。利用<code>node</code>提供的多线程环境，<code>happypack</code>是可以多线程打包的。基本上打开官网看了一下readme就可以配置了，特别是我只针对js的编译进行优化，配置还是比较简单的。</p>
 </blockquote>
@@ -342,7 +344,7 @@
 </ul>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// build/webpack.prod.conf.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// @file: webpack.config.js</span></span><br><span class="line"><span class="keyword">const</span> HappyPack = <span class="built_in">require</span>(<span class="string">'happypack'</span>);</span><br><span class="line"> </span><br><span class="line">exports.module = &#123;</span><br><span class="line">  rules: [</span><br><span class="line">    &#123;</span><br><span class="line">      test: <span class="regexp">/.js$/</span>,</span><br><span class="line">      <span class="comment">// 1) replace your original list of loaders with "happypack/loader":</span></span><br><span class="line">      <span class="comment">// loaders: [ 'babel-loader?presets[]=es2015' ],</span></span><br><span class="line">      use: <span class="string">'happypack/loader'</span>,</span><br><span class="line">      include: [ <span class="comment">/* ... */</span> ],</span><br><span class="line">      exclude: [ <span class="comment">/* ... */</span> ]</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  plugins: [</span><br><span class="line">     <span class="comment">// 2) create the plugin:</span></span><br><span class="line">    <span class="keyword">new</span> HappyPack(&#123;</span><br><span class="line">        <span class="comment">// 3) re-add the loaders you replaced above in #1:</span></span><br><span class="line">        loaders: [ <span class="string">'babel-loader?presets[]=es2015'</span> ]</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这时的编译时间也减小了一些</p>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/643.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/643.png" alt></p>
 <blockquote>
 <p>更多详情 <a href="http://blog.poetries.top/2018/11/21/webpack-review/#6-1-%E5%88%86%E6%9E%90%E6%89%93%E5%8C%85%E7%BB%93%E6%9E%9C">http://blog.poetries.top/2018/11/21/webpack-review/#6-1-%E5%88%86%E6%9E%90%E6%89%93%E5%8C%85%E7%BB%93%E6%9E%9C</a></p>
 </blockquote>

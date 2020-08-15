@@ -23,14 +23,14 @@
 <meta property="og:site_name" content="Poetry&#39;s Blog">
 <meta property="og:description" content="一、React v16.0前的生命周期 1.1 第一个是组件初始化(initialization)阶段 也就是以下代码中类的构造方法( constructor() ),Test类继承了react Component这个基类，也就继承这个react的基类，才能有render(),生命周期等方法可以使用，这也说明为什么函数组件不能使用这些方法的原因  super(props)用来调用基类的构造方法(">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/417.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/418.png">
-<meta property="og:image" content="http://blog.poetries.top/img-repo/2019/10/419.png">
-<meta property="og:updated_time" content="2020-08-10T15:44:44.934Z">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/417.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/418.png">
+<meta property="og:image" content="https://poetries1.gitee.io/img-repo/2019/10/419.png">
+<meta property="og:updated_time" content="2020-08-15T04:25:31.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React16.3新的生命周期详解">
 <meta name="twitter:description" content="一、React v16.0前的生命周期 1.1 第一个是组件初始化(initialization)阶段 也就是以下代码中类的构造方法( constructor() ),Test类继承了react Component这个基类，也就继承这个react的基类，才能有render(),生命周期等方法可以使用，这也说明为什么函数组件不能使用这些方法的原因  super(props)用来调用基类的构造方法(">
-<meta name="twitter:image" content="http://blog.poetries.top/img-repo/2019/10/417.png">
+<meta name="twitter:image" content="https://poetries1.gitee.io/img-repo/2019/10/417.png">
 
   
 
@@ -85,6 +85,8 @@
 
   <!-- 聊天系统 -->
   
+    
+   <link type="text/css" rel="stylesheet" href="/renxi/default.css">
    <style>
       #modal {
         position: static !important;
@@ -271,7 +273,7 @@
   <div class="article-content">
     
       <div id="container">
-        <h2 id="一、React-v16-0前的生命周期"><a href="#一、React-v16-0前的生命周期" class="headerlink" title="一、React v16.0前的生命周期"></a>一、React v16.0前的生命周期</h2><p><img src="http://blog.poetries.top/img-repo/2019/10/417.png" alt></p>
+        <h2 id="一、React-v16-0前的生命周期"><a href="#一、React-v16-0前的生命周期" class="headerlink" title="一、React v16.0前的生命周期"></a>一、React v16.0前的生命周期</h2><p><img src="https://poetries1.gitee.io/img-repo/2019/10/417.png" alt></p>
 <h3 id="1-1-第一个是组件初始化-initialization-阶段"><a href="#1-1-第一个是组件初始化-initialization-阶段" class="headerlink" title="1.1 第一个是组件初始化(initialization)阶段"></a>1.1 第一个是组件初始化(initialization)阶段</h3><blockquote>
 <p>也就是以下代码中类的构造方法( <code>constructor()</code> ),Test类继承了react <code>Component</code>这个基类，也就继承这个<code>react</code>的基类，才能有<code>render()</code>,生命周期等方法可以使用，这也说明为什么函数组件不能使用这些方法的原因</p>
 </blockquote>
@@ -326,7 +328,7 @@
 </blockquote>
 <p>此方法在组件被卸载前调用，可以在这里执行一些清理工作，比如清楚组件中使用的定时器，清除<code>componentDidMount</code>中手动创建的<code>DOM</code>元素等，以避免引起内存泄漏</p>
 <h2 id="二、React-v16-4-的生命周期"><a href="#二、React-v16-4-的生命周期" class="headerlink" title="二、React v16.4 的生命周期"></a>二、React v16.4 的生命周期</h2><p><strong>React v16.4 的生命周期图</strong></p>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/418.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/418.png" alt></p>
 <h3 id="2-1-变更缘由"><a href="#2-1-变更缘由" class="headerlink" title="2.1 变更缘由"></a>2.1 变更缘由</h3><blockquote>
 <p>原来（<code>React v16.0</code>前）的生命周期在<code>React v16</code>推出的<code>Fiber</code>之后就不合适了，因为如果要开启<code>async rendering</code>，在<code>render</code>函数之前的所有函数，都有可能被执行多次</p>
 </blockquote>
@@ -351,7 +353,7 @@
 <p><code>getDerivedStateFromProps</code>本来（React v16.3中）是只在创建和更新（由父组件引发部分），也就是不是不由父组件引发，那么<code>getDerivedStateFromProps</code>也不会被调用，如自身<code>setState</code>引发或者<code>forceUpdate</code>引发</p>
 </blockquote>
 <p><strong>React v16.3 的生命周期图</strong></p>
-<p><img src="http://blog.poetries.top/img-repo/2019/10/419.png" alt></p>
+<p><img src="https://poetries1.gitee.io/img-repo/2019/10/419.png" alt></p>
 <blockquote>
 <p>这样的话理解起来有点乱，在<code>React v16.4</code>中改正了这一点，让<code>getDerivedStateFromProps</code>无论是<code>Mounting</code>还是<code>Updating</code>，也无论是因为什么引起的<code>Updating</code>，全部都会被调用，具体可看<code>React v16.4</code>的生命周期图</p>
 </blockquote>
